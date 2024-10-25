@@ -1,13 +1,13 @@
 using Moq;
 using ToDo.Repositories;
 using ToDo.Services;
-namespace Tests
+namespace ToDoTest.Unit
 {
-    public class TasksServiceTest
+    public class TaskServiceTest
     {
         private Mock<ITaskRepository> _taskRepositoryMock;
         private readonly ITaskService _taskService;
-        public TasksServiceTest()
+        public TaskServiceTest()
         {
             _taskRepositoryMock = new Mock<ITaskRepository>();
             _taskService = new TaskService(_taskRepositoryMock.Object);
