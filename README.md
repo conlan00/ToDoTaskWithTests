@@ -55,7 +55,7 @@ Each ToDo item contains the following fields:
    ```
 4. Create a container using the command:
    ```bash
-   docker run --rm --network my_custom_network -p 5041:5041 -e ASPNETCORE_URLS="http://+:5041" dotnetbackenddeveloper/todotaskwithtests
+   docker run --name my_todo_app_container --network my_custom_network -p 5041:5041 -e ASPNETCORE_URLS="http://+:5041" dotnetbackenddeveloper/todotaskwithtests
    ```
 5. Update the database inside the container:
    ```bash
