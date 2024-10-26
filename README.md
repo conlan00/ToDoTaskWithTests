@@ -23,6 +23,7 @@ Each ToDo item contains the following fields:
      - **User**: `root`
      - **Password**: `mypass`
 3. Change config file `appsettings.json`
+   from
     ```bash
     "ConnectionStrings": {
       "DbConnection1": "server=mariadbtest;user=root;password=mypass;database=Todo"
@@ -34,10 +35,6 @@ Each ToDo item contains the following fields:
       "DbConnection1": "server=localhost;user=root;password=mypass;database=Todo"
     }
     ```
-5. Update the database using existing migrations:
-   ```bash
-   dotnet ef database update
-   ```
 
 ### 2. Docker
 
@@ -48,7 +45,7 @@ Each ToDo item contains the following fields:
 2. Set up MariaDB using the command:
    ```bash
    docker run --name mariadbtest --network my_custom_network -e MYSQL_ROOT_PASSWORD=mypass -p 3306:3306 -d docker.io/library/mariadb:latest
-   ```
+   ```   
 3. Create an image for the Web API using the Dockerfile:
    ```bash
    docker build --rm -t dotnetbackenddeveloper/todotaskwithtests:latest .
@@ -57,12 +54,10 @@ Each ToDo item contains the following fields:
    ```bash
    docker run --name my_todo_app_container --network my_custom_network -p 5041:5041 -e ASPNETCORE_URLS="http://+:5041" dotnetbackenddeveloper/todotaskwithtests
    ```
-5. Update the database inside the container:
+5. Open browser and type this url:
    ```bash
-   docker exec -it my_todo_app_container dotnet ef database update
+   http://localhost:5041/swagger/index.html
    ```
-
-
 ## Required Operations
 
 My task supports the following operations:
