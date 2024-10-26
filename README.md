@@ -11,15 +11,15 @@ A minimal structure for managing ToDo tasks. It allows you to create, update, an
  - ✅ validated data
  - ✅ Code running in docker
  - ✅ Repository Pattern
-## ToDo Structure
 
+## ToDo Structure
 Each ToDo item contains the following fields:
 
 - **Date and Time of Expiry**: Specifies when the task is due.
 - **Title**: A short and descriptive title for the task.
 - **Description**: A more detailed description of the task.
 - **% Complete**: Indicates the percentage of the task that is completed.
-##ToDo Task Setup Instructions
+## ToDo Task Setup Instructions
 
 ### 1. Visual Studio 2022
 
