@@ -1,7 +1,16 @@
-# ToDo Task 
+# ToDo Task - simple RESTAPI with few endpoints
 
 A minimal structure for managing ToDo tasks. It allows you to create, update, and manage tasks with the following essential fields and operations.
-
+ - ✅ .net >= 8.0
+ - ✅ Web API
+ - ✅ data persisted in db using ORM (mariadb)
+ - ✅ xunit for unit/integration tests
+ - ✅ commented code
+ - ✅ ready to compile and run
+ - ✅ without any external scripts
+ - ✅ validated data
+ - ✅ Code running in docker
+ - ✅ Repository Pattern
 ## ToDo Structure
 
 Each ToDo item contains the following fields:
